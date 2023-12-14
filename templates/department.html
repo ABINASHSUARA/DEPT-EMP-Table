@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background: linear-gradient(120deg,orange,white,green);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+        }
+        table
+        {
+            color:darkblue;
+        }
+        h1
+        {
+            color: blueviolet;
+        }
+        th
+        {
+            font-style: italic;
+            color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>DEPARTMENTS</h1>
+        <table border="2px">
+            <tr>
+                <th>Department Number</th>
+                <th>Department Name</th>
+                <th>Location</th>
+            </tr>
+
+
+            {% for do in depts %}
+                <tr>
+                    <td>{{ do.dept_no }}</td>
+                    <td>{{ do.d_name }}</td>
+                    <td>{{ do.loc }}</td>    
+                </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>

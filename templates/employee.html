@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background: linear-gradient(120deg,orange,white,green);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+        }
+        table
+        {
+            color:darkblue;
+        }
+        h1
+        {
+            color: blueviolet;
+        }
+        th
+        {
+            font-style: italic;
+            color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>DEPARTMENTS</h1>
+        <table border="2px">
+            <tr>
+                <th>Employee Number</th>
+                <th>Employee Name</th>
+                <th>JOB</th>
+                <th>Mgr</th>
+                <th>Hire-Date</th>
+                <th>Salary</th>
+                <th>Commission</th>
+                <th>Department Number</th>
+            </tr>
+
+
+            {% for eo in emp %}
+                <tr>
+                    <td>{{ eo.emp_no }}</td>
+                    <td>{{ eo.e_name }}</td>
+                    <td>{{ eo.job }}</td>
+                    <td>{{ eo.mgr }}</td>
+                    <td>{{ eo.hire_date }}</td>
+                    <td>{{ eo.sal }}</td>
+                    <td>{{ eo.comm}}</td>
+                    <td>{{ eo.dept_no }}</td>
+                        
+                </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
